@@ -1,0 +1,12 @@
+version: '3.9'
+
+services:
+  portfolio:
+    build: .
+    image: jonhef-portfolio
+    container_name: jonhef-portfolio
+    ports:
+      - "5173:5173"
+      # Uncomment to expose TLS (certs required in ./ssl):
+      - "443:443"
+    restart: unless-stopped

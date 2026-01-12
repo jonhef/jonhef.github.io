@@ -29,3 +29,10 @@ Email и Telegram сейчас заглушки. Подставьте рабоч
   - Cloudflare Origin: те же пути + `ssl_trusted_certificate` `/etc/nginx/ssl/cloudflare-origin-ca.pem`
     (скачать Origin CA из панели Cloudflare)  
     Пример запуска с монтированием: `docker run -p 5173:5173 -p 443:443 -v $(pwd)/ssl:/etc/nginx/ssl jonhef-portfolio`
+
+### Docker Compose v1
+
+- Поднять: `docker-compose up -d`
+- HTTP будет на `5173:5173`
+- Чтобы включить HTTPS, раскомментируйте порт `443:443` в `docker-compose.yml` и положите сертификаты в `./ssl`
+  (`jonhef-origin.crt`, `jonhef-origin.key`, `cloudflare-origin-ca.pem` для Cloudflare Origin)
