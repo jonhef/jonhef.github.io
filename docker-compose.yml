@@ -9,6 +9,6 @@ services:
       - "5173:5173"
     volumes:
       # Используем уже существующие сертификаты на сервере (пример для Let's Encrypt):
-      - /etc/letsencrypt/live/jonhef.org/fullchain.pem:/etc/nginx/ssl/site.crt:ro
-      - /etc/letsencrypt/live/jonhef.org/privkey.pem:/etc/nginx/ssl/site.key:ro
+      - /etc/ssl/cloudflare/origin.pem;
+      - /etc/ssl/cloudflare/origin.key;
     restart: unless-stopped
