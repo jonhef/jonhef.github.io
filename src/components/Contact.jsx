@@ -2,7 +2,7 @@ import { FaEnvelope, FaGithub } from 'react-icons/fa'
 import { SiTelegram } from 'react-icons/si'
 
 const githubUsername = 'jonhef'
-const email = 'your.email@example.com' // замените на рабочий адрес
+const email = 'me@jonhef.org' // замените на рабочий адрес
 const telegramUsername = '' // добавьте username без @, чтобы показать ссылку
 
 function Contact() {

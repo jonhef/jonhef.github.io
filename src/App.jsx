@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import About from './components/About'
 import Contact from './components/Contact'
 import Header from './components/Header'
@@ -9,6 +10,39 @@ function App() {
     { href: '#projects', label: 'PROJECTS' },
     { href: '#contact', label: 'CONTACT' },
   ]
+
+  useEffect(() => {
+    const handleAnchorClick = (event) => {
+      const anchor = event.target.closest('a[href^="#"]')
+      if (!anchor) return
+
+      const hash = anchor.getAttribute('href')
+      if (!hash || hash === '#') return
+
+      const target = document.querySelector(hash)
+      if (!target) return
+
+      event.preventDefault()
+      const offset = 80
+      const start = window.scrollY
+      const end = target.getBoundingClientRect().top + window.scrollY - offset
+      const duration = 450
+      const startTime = performance.now()
+
+      const animate = (now) => {
+        const elapsed = now - startTime
+        const progress = Math.min(elapsed / duration, 1)
+        const eased = 1 - Math.pow(1 - progress, 3) // easeOutCubic
+        window.scrollTo(0, start + (end - start) * eased)
+        if (progress < 1) requestAnimationFrame(animate)
+      }
+
+      requestAnimationFrame(animate)
+    }
+
+    document.addEventListener('click', handleAnchorClick)
+    return () => document.removeEventListener('click', handleAnchorClick)
+  }, [])
 
   return (
     <div className="screen">
