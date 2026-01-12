@@ -13,5 +13,5 @@ FROM nginx:1.27-alpine AS runner
 COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx/jonhef.conf /etc/nginx/conf.d/jonhef.conf
 
-EXPOSE 5173
+EXPOSE 5175 5176
 CMD ["nginx", "-g", "daemon off;"]

@@ -23,16 +23,12 @@ Email и Telegram сейчас заглушки. Подставьте рабоч
 ## Docker
 
 - Собрать образ: `docker build -t jonhef-portfolio .`
-- Запустить HTTP: `docker run -p 5173:5173 jonhef-portfolio` и открыть `http://localhost:5173`
-- Для HTTPS добавьте сертификаты в контейнер и пробросьте порт `-p 443:443`
-  - Обычный сертификат: `/etc/nginx/ssl/jonhef-origin.crt` и `/etc/nginx/ssl/jonhef-origin.key`
-  - Cloudflare Origin: те же пути + `ssl_trusted_certificate` `/etc/nginx/ssl/cloudflare-origin-ca.pem`
-    (скачать Origin CA из панели Cloudflare)  
-    Пример запуска с монтированием: `docker run -p 5173:5173 -p 443:443 -v $(pwd)/ssl:/etc/nginx/ssl jonhef-portfolio`
+- Запустить с HTTP+HTTPS на портах 5175/5176 (чтобы не конфликтовать с `npm run dev` на 5173): `docker run -p 5175:5175 -p 5176:5176 -v /etc/letsencrypt/live/jonhef.org/fullchain.pem:/etc/nginx/ssl/site.crt:ro -v /etc/letsencrypt/live/jonhef.org/privkey.pem:/etc/nginx/ssl/site.key:ro jonhef-portfolio`
+  - HTTP: `http://localhost:5175` (редиректит на HTTPS)
+  - HTTPS: `https://localhost:5176`
+  - Сертификаты ожидаются как `/etc/nginx/ssl/site.crt` и `/etc/nginx/ssl/site.key` (пример выше использует уже существующие файлы Let's Encrypt на сервере)
 
 ### Docker Compose v1
 
 - Поднять: `docker-compose up -d`
-- HTTP будет на `5173:5173`
-- Чтобы включить HTTPS, раскомментируйте порт `443:443` в `docker-compose.yml` и положите сертификаты в `./ssl`
-  (`jonhef-origin.crt`, `jonhef-origin.key`, `cloudflare-origin-ca.pem` для Cloudflare Origin)
+- HTTP будет на `5175:5175`, HTTPS — `5176:5176` (в `docker-compose.yml` уже смонтированы сертификаты из `/etc/letsencrypt/live/jonhef.org`)
