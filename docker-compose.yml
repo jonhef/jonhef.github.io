@@ -6,8 +6,7 @@ services:
     image: jonhef-portfolio
     container_name: jonhef-portfolio
     ports:
-      - "5175:5175"
-      - "5176:5176"
+      - "5173:5173"
     volumes:
       # Используем уже существующие сертификаты на сервере (пример для Let's Encrypt):
       - /etc/letsencrypt/live/jonhef.org/fullchain.pem:/etc/nginx/ssl/site.crt:ro
