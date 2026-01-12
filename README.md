@@ -11,6 +11,7 @@
 ## Где менять данные
 
 - Текст и кнопки хедера: `src/components/Header.jsx`
+- Фото в хедере: замените `src/assets/avatar.png` на своё
 - Описание/стек: `src/components/About.jsx`
 - Контакты (email/Telegram): `src/components/Contact.jsx`
 - Стили и тема: `src/index.css`

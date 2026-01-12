@@ -34,8 +34,7 @@ function Contact() {
       </div>
 
       <p className="muted">
-        Свяжитесь любым удобным способом. Email и Telegram легко поменять в
-        <code>src/components/Contact.jsx</code>.
+        contact me using any convenient method
       </p>
 
       <div className="contact-grid">

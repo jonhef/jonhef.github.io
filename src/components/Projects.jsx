@@ -21,7 +21,7 @@ function Projects() {
       })
       .catch((err) => {
         console.error(err)
-        setError('Не получилось загрузить список репозиториев.')
+        setError('Repos were not loaded')
         setLoading(false)
       })
   }, [])
@@ -36,7 +36,7 @@ function Projects() {
   )
 
   const formatDate = (value) =>
-    new Date(value).toLocaleDateString('ru-RU', {
+    new Date(value).toLocaleDateString('en-US', {
       month: 'short',
       year: 'numeric',
     })
@@ -48,11 +48,11 @@ function Projects() {
         <span className="panel-status">SYS/02</span>
       </div>
 
-      {loading && <p className="muted">Загружаем репозитории...</p>}
+      {loading && <p className="muted">loading repos</p>}
       {error && <p className="error">{error}</p>}
 
       {!loading && !error && visibleRepos.length === 0 && (
-        <p className="muted">Репозитории не найдены.</p>
+        <p className="muted">repos were not found</p>
       )}
 
       <div className="project-grid">

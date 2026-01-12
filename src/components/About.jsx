@@ -1,12 +1,12 @@
 const stack = [
   'React',
-  'TypeScript',
-  'Vite',
-  'Node',
-  'CSS/GSAP',
-  'REST/GraphQL',
-  'UI Prototyping',
-  'Retro UX',
+  'C',
+  'C++',
+  'ASM',
+  'C#',
+  'Python',
+  'Django/Flask/FastAPI',
+  'Github & git'
 ]
 
 function About() {
@@ -18,15 +18,16 @@ function About() {
       </div>
       <div className="panel-body">
         <p>
-          Пишу интерфейсы на React, люблю, когда дизайн дышит и ведёт себя как
-          электронная музыка: чёткий ритм, дозированные всплески и немного
-          артефактов. В работе ценю ясные данные, быстрые сборки и простые
-          переходы от идеи к прототипу.
+          full-stack developer with main focus on the speed and cleanliness of execution. 
+          can usually be found working alone, but has no problems with teamwork when needed. 
+          prefers simple solutions with practicality and values fast paths from idea to working code.
         </p>
         <p>
-          Часто подключаю анимации, настраиваю сборку под конкретные задачи,
-          автоматизирую рутинные штуки и вылизываю детали: состояния загрузки,
-          мелкие hover-эффекты, микро-копирайтинг.
+          i design interfaces with react. personally, i prefer minimalistic 
+          design with a clean layout and not so much empty space, 
+          and i feel like everything should be deliberate in design. 
+          my design style would be more akin to russian rock design: raw and straightforward. 
+          i believe in clean data, rapid development, and a smooth transition from idea to prototype.
         </p>
       </div>
 
