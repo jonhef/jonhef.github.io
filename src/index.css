@@ -91,7 +91,7 @@ a {
   z-index: 1;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 90px 24px 120px;
+  padding: 48px 24px 120px;
 }
 
 .top-bar {
@@ -164,21 +164,27 @@ a {
 .hero {
   min-height: 90vh;
   display: grid;
-  place-items: center;
-  padding-top: 40px;
+  align-items: start;
+  justify-items: center;
+  padding-top: 16px;
 }
 
 .hero-grid {
   display: grid;
-  gap: 32px;
+  column-gap: clamp(32px, 5vw, 56px);
+  row-gap: 24px;
   align-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .hero-copy {
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 22px;
+}
+
+.hero-copy > * {
+  margin: 0;
 }
 
 .eyebrow {
