@@ -6,7 +6,7 @@ services:
     image: jonhef-portfolio
     container_name: jonhef-portfolio
     ports:
-      - "5173:5173"
+      - "5173:80"
     volumes:
       # Используем уже существующие сертификаты на сервере (пример для Let's Encrypt):
       - /etc/ssl/cloudflare/origin.pem;
