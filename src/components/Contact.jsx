@@ -34,7 +34,7 @@ function Contact() {
       </div>
 
       <p className="muted">
-        contact me using any convenient method
+        contact me using any convenient method.
       </p>
 
       <div className="contact-grid">

@@ -228,6 +228,13 @@ a {
   animation: glitch 2s infinite linear alternate;
 }
 
+.hero-subtitle {
+  margin: 0;
+  font-size: clamp(18px, 3vw, 24px);
+  color: var(--text);
+  letter-spacing: 1px;
+}
+
 .lede {
   font-size: 18px;
   color: var(--text);

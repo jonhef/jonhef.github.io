@@ -18,16 +18,13 @@ function About() {
       </div>
       <div className="panel-body">
         <p>
-          full-stack developer with main focus on the speed and cleanliness of execution. 
-          can usually be found working alone, but has no problems with teamwork when needed. 
-          prefers simple solutions with practicality and values fast paths from idea to working code.
+          full-stack developer preparing for a bsc in mathematics & computer science. i focus on fast,
+          clean implementations that make abstract ideas tangible and easy to review.
         </p>
         <p>
-          i design interfaces with react. personally, i prefer minimalistic 
-          design with a clean layout and not so much empty space, 
-          and i feel like everything should be deliberate in design. 
-          my design style would be more akin to russian rock design: raw and straightforward. 
-          i believe in clean data, rapid development, and a smooth transition from idea to prototype.
+          i design interfaces with react and prefer deliberate, minimal layouts. my process is straightforward:
+          clear data models, efficient code paths, and a quick loop from idea to prototype with documentation for
+          whoever reviews the work next.
         </p>
       </div>
 

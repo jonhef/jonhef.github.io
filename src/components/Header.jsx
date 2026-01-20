@@ -5,27 +5,27 @@ function Header() {
     <section className="hero" id="top">
       <div className="hero-grid">
         <div className="hero-copy">
-          <p className="eyebrow">PERSONAL NODE // RETRO 88's</p>
-          <h1 className="glitch" data-text="jonhef">
-            jonhef
+          <p className="eyebrow">ADMISSIONS FILE // BSC MATH & CS</p>
+          <h1 className="glitch" data-text="Jon Hef">
+            Jon Hef
           </h1>
+          <h2 className="hero-subtitle">aspiring bsc in mathematics & computer science</h2>
           <p className="lede">
-            i'm a react/c developer with a soft spot for neon accents, 
-            subtle animations, and the aesthetic of vintage computers. 
-            i enjoy building clean, thoughtful interfaces and 
-            i'm not afraid to dive into assembly when it makes sense.
+            i blend mathematical thinking with full-stack execution to ship interfaces and systems that are fast,
+            legible, and reliable. I am applying my project work to an academic track focused on algorithms,
+            computation, and the way real products get built.
           </p>
           <div className="cta-row">
             <a className="btn primary" href="#projects">
-              projects
+              View Projects
             </a>
             <a className="btn ghost" href="#contact">
-              contact
+              Contact
             </a>
           </div>
           <div className="ticker">
             <span className="dot" />
-            <span>react • c • c++ • python • github</span>
+            <span>Math Foundations • Algorithms • React • C/C++ • Python</span>
           </div>
         </div>
 
