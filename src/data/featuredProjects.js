@@ -3,9 +3,9 @@ const featuredProjects = [
     title: 'Thinkza — Research Notebook',
     summary:
       'Lightweight workspace for structuring research prompts and notes into reusable cards teams can share and review.',
-    tech: ['React', 'FastAPI', 'PostgreSQL', 'OpenAI API', 'Docker'],
+    tech: ['React', 'ASP.NET', 'PostgreSQL', 'OpenAI API', 'Docker'],
     role: 'Product and full-stack builder',
-    liveUrl: 'https://thinkza.app',
+    liveUrl: 'https://thinkza.jonhef.org/',
     githubUrl: 'https://github.com/jonhef/thinkza',
   },
   {
@@ -20,27 +20,27 @@ const featuredProjects = [
   {
     title: 'smshubapi',
     summary: 'Async API client for SmsHub.org to request, verify, and recycle numbers programmatically.',
-    tech: ['Python', 'AsyncIO', 'HTTPX'],
+    tech: ['Python', 'AsyncIO', 'aiohttp'],
     role: 'Backend developer',
     liveUrl: 'https://pypi.org/project/smshubapi/',
     githubUrl: 'https://github.com/jonhef/smshubapi',
   },
   {
-    title: 'mj-engine',
+    title: 'documentation-guide',
     summary:
-      'C++ math and rendering sandbox for experimenting with low-level engine patterns, ECS-style updates, and profiling.',
-    tech: ['C++', 'Rendering prototypes', 'ECS patterns'],
-    role: 'Engine developer',
-    liveUrl: 'https://github.com/jonhef/mj-engine#readme',
-    githubUrl: 'https://github.com/jonhef/mj-engine',
+      'Lightweight style guide for README files, API notes, and onboarding docs so contributors can ship changes with consistent writing.',
+    tech: ['Markdown', 'Docs-as-code', 'Templates'],
+    role: 'Author and maintainer',
+    liveUrl: 'https://github.com/jonhef/documentation-guide#readme',
+    githubUrl: 'https://github.com/jonhef/documentation-guide',
   },
   {
-    title: 'telegram-cloud',
-    summary: 'CLI utility for syncing local files to Telegram cloud channels with resumable transfers and tagging.',
-    tech: ['Python', 'Telethon', 'SQLite'],
-    role: 'CLI and automation builder',
-    liveUrl: 'https://github.com/jonhef/telegram-cloud#readme',
-    githubUrl: 'https://github.com/jonhef/telegram-cloud',
+    title: 'madeinhellOS',
+    summary: 'Hobby operating system built from scratch with a custom bootloader, VGA text output, and kernel scaffolding.',
+    tech: ['C', 'x86', 'Bootloader'],
+    role: 'Systems developer',
+    liveUrl: 'https://github.com/jonhef/madeinhellOS#readme',
+    githubUrl: 'https://github.com/jonhef/madeinhellOS',
   },
 ]
 
