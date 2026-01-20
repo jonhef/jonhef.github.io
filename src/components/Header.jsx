@@ -6,7 +6,7 @@ function Header() {
       <div className="hero-grid">
         <div className="hero-copy">
           <p className="eyebrow">ADMISSIONS FILE // BSC MATH & CS</p>
-          <h1 className="glitch" data-text="Jon Hef">
+          <h1 className="glitch" data-text="jonhef">
             jonhef
           </h1>
           <h2 className="hero-subtitle">aspiring bsc in mathematics & computer science</h2>

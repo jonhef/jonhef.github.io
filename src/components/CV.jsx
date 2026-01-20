@@ -14,7 +14,7 @@ function CV() {
           Mathematics & Computer Science. I keep it updated for admissions review and can provide it immediately.
         </p>
         <div className="cta-row">
-          <a className="btn primary" href={`mailto:${cvEmail}?subject=CV%20Request%20-%20Jon%20Hef`}>
+          <a className="btn primary" href={`mailto:${cvEmail}?subject=CV%20Request%20-%20jonhef`}>
             Request CV via Email
           </a>
           <a className="btn ghost" href="#projects">
