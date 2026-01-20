@@ -1,46 +1,6 @@
-import { useEffect, useMemo, useState } from 'react'
-
-const username = 'jonhef'
+import featuredProjects from '../data/featuredProjects'
 
 function Projects() {
-  const [repos, setRepos] = useState([])
-  const [loading, setLoading] = useState(true)
-  const [error, setError] = useState('')
-
-  useEffect(() => {
-    fetch(`https://api.github.com/users/${username}/repos?per_page=100&sort=updated`)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('GitHub API request failed')
-        }
-        return response.json()
-      })
-      .then((data) => {
-        setRepos(data)
-        setLoading(false)
-      })
-      .catch((err) => {
-        console.error(err)
-        setError('Repos were not loaded')
-        setLoading(false)
-      })
-  }, [])
-
-  const visibleRepos = useMemo(
-    () =>
-      repos
-        .filter((repo) => !repo.fork && !repo.archived)
-        .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at))
-        .slice(0, 6),
-    [repos],
-  )
-
-  const formatDate = (value) =>
-    new Date(value).toLocaleDateString('en-US', {
-      month: 'short',
-      year: 'numeric',
-    })
-
   return (
     <section className="panel" id="projects">
       <div className="panel-header">
@@ -48,37 +8,38 @@ function Projects() {
         <span className="panel-status">SYS/02</span>
       </div>
 
-      {loading && <p className="muted">loading repos</p>}
-      {error && <p className="error">{error}</p>}
-
-      {!loading && !error && visibleRepos.length === 0 && (
-        <p className="muted">repos were not found</p>
-      )}
-
       <div className="project-grid">
-        {!loading &&
-          !error &&
-          visibleRepos.map((repo) => (
-            <a
-              className="project-card"
-              key={repo.id}
-              href={repo.html_url}
-              target="_blank"
-              rel="noreferrer"
-            >
-              <div className="project-title">
-                <span className="project-bullet" />
-                <span>{repo.name}</span>
-              </div>
-              <p className="project-desc">
-                {repo.description ? repo.description : 'No description yet.'}
-              </p>
-              <div className="project-meta">
-                <span>{repo.language ?? 'Unknown'}</span>
-                <span>Updated: {formatDate(repo.pushed_at)}</span>
-              </div>
-            </a>
-          ))}
+        {featuredProjects.map((project) => (
+          <div className="project-card" key={project.title}>
+            <div className="project-title">
+              <span className="project-bullet" />
+              <span>{project.title}</span>
+            </div>
+            <p className="project-desc">{project.summary}</p>
+            <div className="project-role">Role: {project.role}</div>
+            <div className="tech-tags" aria-label="Tech stack">
+              {project.tech.map((tech) => (
+                <span className="tech-chip" key={`${project.title}-${tech}`}>
+                  {tech}
+                </span>
+              ))}
+            </div>
+            <div className="project-links">
+              <a href={project.liveUrl} target="_blank" rel="noreferrer">
+                Live / Demo
+              </a>
+              <a href={project.githubUrl} target="_blank" rel="noreferrer">
+                GitHub
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="project-more">
+        <a href="https://github.com/jonhef" target="_blank" rel="noreferrer">
+          More on GitHub →
+        </a>
       </div>
     </section>
   )

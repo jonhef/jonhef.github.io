@@ -523,6 +523,71 @@ a {
   font-size: 13px;
 }
 
+.project-role {
+  margin: 6px 0 0;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tech-chip {
+  padding: 6px 10px;
+  border-radius: 10px;
+  background: rgba(0, 255, 156, 0.08);
+  border: 1px solid rgba(0, 255, 156, 0.25);
+  color: var(--text);
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.project-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 255, 156, 0.25);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: transform 160ms ease, border-color 160ms ease, color 160ms ease;
+}
+
+.project-links a:hover {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.project-more {
+  margin-top: 18px;
+  text-align: right;
+}
+
+.project-more a {
+  color: var(--text);
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.project-more a:hover {
+  color: var(--primary);
+}
+
 .achievement-item {
   padding: 8px 0;
 }
