@@ -22,7 +22,7 @@ const featuredProjects = [
     summary: 'Async API client for SmsHub.org to request, verify, and recycle numbers programmatically.',
     tech: ['Python', 'AsyncIO', 'aiohttp'],
     role: 'Backend developer',
-    liveUrl: 'https://pypi.org/project/smshubapi/',
+    liveUrl: 'https://github.com/jonhef/smshubapi#readme',
     githubUrl: 'https://github.com/jonhef/smshubapi',
   },
   {

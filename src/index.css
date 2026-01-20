@@ -588,6 +588,65 @@ a {
   color: var(--primary);
 }
 
+.achievement-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.achievement-card {
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 255, 156, 0.22);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: inset 0 0 10px rgba(0, 255, 156, 0.08);
+}
+
+.achievement-heading {
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: var(--cyan);
+}
+
+.achievement-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.achievement-list li {
+  color: var(--text);
+}
+
+.coursework-groups {
+  display: grid;
+  gap: 12px;
+}
+
+.coursework-group {
+  display: grid;
+  gap: 6px;
+}
+
+.coursework-label {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.coursework-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.muted-small {
+  font-size: 13px;
+}
+
 .achievement-item {
   padding: 8px 0;
 }
